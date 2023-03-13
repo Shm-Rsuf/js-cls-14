@@ -1,40 +1,56 @@
-'use strict';
+"use strict";
 
-// const restaurant = {
-//   name: 'Burger House',
-//   location: 'Puran Bogura, Dhaka,Bangladesh',
-//   category: ['Italian', 'Thailand', 'Indian', 'Local', 'Organic'],
-//   startMenu: [
-//     'Chicken Cheese Burger',
-//     'Beef Burger',
-//     'Garlic Bread',
-//     'Italian Spicy Pasta'
-//   ],
-//   mainMenu: ['Burger', 'Pasta', 'Pizza', 'French Fries'],
-//   openingHours: {
-//     sun: {
-//       open: 10,
-//       close: 22
-//     },
-//     fri: {
-//       open: 12,
-//       close: 20
-//     },
-//     wed: {
-//       open: 8,
-//       close: 20
-//     }
-//   },
-//   order: function (startInd, mainInd) {
-//     return [this.startMenu[startInd], this.mainMenu[mainInd]];
-//   },
-//   orderDelivery: function ({ startIndex = 0, mainIndex = 0, time = '10:00pm', address = 'Unknown' }) {
-//     console.log(`${this.startMenu[startIndex]} & ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`)
-//   },
-//   burgerOrder: function (ing1, ing2, ing3) {
-//     console.log(`Here is your is burger with ${ing1} , ${ing2} & ${ing3}`)
-//   }
-// }
+const restaurant = {
+  name: "Burger House",
+  location: "Puran Bogura, Dhaka,Bangladesh",
+  category: ["Italian", "Thailand", "Indian", "Local", "Organic"],
+  startMenu: [
+    "Chicken Cheese Burger",
+    "Beef Burger",
+    "Garlic Bread",
+    "Italian Spicy Pasta",
+  ],
+  mainMenu: ["Burger", "Pasta", "Pizza", "French Fries"],
+  openingHours: {
+    sun: {
+      open: 10,
+      close: 22,
+    },
+    fri: {
+      open: 12,
+      close: 20,
+    },
+    wed: {
+      open: 8,
+      close: 20,
+    },
+  },
+  order: function (startInd, mainInd) {
+    return [this.startMenu[startInd], this.mainMenu[mainInd]];
+  },
+  orderDelivery: function ({
+    startIndex = 0,
+    mainIndex = 0,
+    time = "10:00pm",
+    address = "Unknown",
+  }) {
+    console.log(
+      `${this.startMenu[startIndex]} & ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`
+    );
+  },
+  burgerOrder: function (ing1, ing2, ing3) {
+    console.log(`Here is your is burger with ${ing1} , ${ing2} & ${ing3}`);
+  },
+};
+// console.log(restaurant);
+////////////////////////////////////////
+//DESTRACTURING ARRAY
+const arr101 = [10, 4, 5, 6];
+const [ten, four, , six] = arr101;
+console.log(ten, four, six);
+
+const [italian, , indian] = restaurant.category;
+console.log(indian, italian);
 
 ///////////////////////////////////////////
 /*SPREAD OPERATOR=>(...)*/
@@ -96,7 +112,6 @@
 //   address: 'Dhaka'
 // });
 // console.log(restaurant.openingHours.sun.close);
-
 
 // const { category: categoryName, startMenu: menuItems } = restaurant;
 // console.log(categoryName[0], menuItems[2]);
