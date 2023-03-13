@@ -42,15 +42,44 @@ const restaurant = {
     console.log(`Here is your is burger with ${ing1} , ${ing2} & ${ing3}`);
   },
 };
+//OBJECT DESTRUCTURING
+// const {
+//   name: resName,
+//   location: resLocation,
+//   category: foodCategory,
+// } = restaurant;
+// console.log(resName, foodCategory, resLocation);
+
+// const [italian, thailand, ...rest] = restaurant.category;
+// console.log(italian, thailand, ...rest);
+
+const myObj = {
+  name: "Usuf Ali",
+  education: {
+    ssc: "chandradighi alim mad",
+    hsc: "chandradighi alim mad",
+  },
+};
+
+// const { ssc, hsc } = myObj.education;
+// console.log(ssc, hsc);
+
+const {
+  name,
+  education: { ssc, hsc },
+} = myObj;
+
+console.log(name, ssc, hsc);
+
 // console.log(restaurant);
 ////////////////////////////////////////
 //DESTRACTURING ARRAY
-const arr101 = [10, 4, 5, 6];
-const [ten, four, , six] = arr101;
-console.log(ten, four, six);
+// const arr101 = [10, 4, 5, 6];
+// const [ten, four, , six] = arr101;
+// console.log(ten, four, six);
 
-const [italian, , indian] = restaurant.category;
-console.log(indian, italian);
+// const [italian, , indian] = restaurant.category;
+// console.log(indian, italian);
 
 ///////////////////////////////////////////
 /*SPREAD OPERATOR=>(...)*/
