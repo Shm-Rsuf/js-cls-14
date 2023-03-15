@@ -53,23 +53,23 @@ const restaurant = {
 // const [italian, thailand, ...rest] = restaurant.category;
 // console.log(italian, thailand, ...rest);
 
-const myObj = {
-  name: "Usuf Ali",
-  education: {
-    ssc: "chandradighi alim mad",
-    hsc: "chandradighi alim mad",
-  },
-};
+// const myObj = {
+//   name: "Usuf Ali",
+//   education: {
+//     ssc: "chandradighi alim mad",
+//     hsc: "chandradighi alim mad",
+//   },
+// };
 
 // const { ssc, hsc } = myObj.education;
 // console.log(ssc, hsc);
 
-const {
-  name,
-  education: { ssc, hsc },
-} = myObj;
+// const {
+//   name,
+//   education: { ssc, hsc },
+// } = myObj;
 
-console.log(name, ssc, hsc);
+// console.log(name, ssc, hsc);
 
 // console.log(restaurant);
 ////////////////////////////////////////
@@ -233,3 +233,43 @@ console.log(name, ssc, hsc);
 // const [m = 5, n = 5, o = 5, p = 5, q = 5, r = 5, s = 5, t = 5] = newArr;
 // console.log(m, n, o, p, q, r, s, t);
 /////////////////////////////////////
+
+////////////////////////////////////////////
+let array = [1, 2, 4, 5, 6];
+
+[array[0], array[array.length - 1]] = [array[array.length - 1], array[0]];
+console.log(array);
+
+//destructuring aliases
+const language = {
+  name: "JavaScript",
+  founded: 1995,
+  founder: "Brendan Eich",
+};
+
+const { name: languageName, founder: founderName } = language;
+
+console.log(languageName, founderName);
+
+///////////////
+const element = document.querySelector("#number").valueAsNumber;
+console.log(typeof element);
+
+//remove duplicate from an array
+const arrDupEl = [1, 3, 4, 1, 4, 5, 2, 4, 1, 6, 5];
+
+const uniqueArray = [...new Set(arrDupEl)];
+console.log(uniqueArray);
+
+//compare two arrays by value
+const hasSameElement = (a, b) => {
+  return (
+    a.length === b.length &&
+    a.every((v, i) => {
+      v === b[i];
+    })
+  );
+};
+
+console.log(hasSameElement([1, 3, 4], [1, 3, 5]));
+console.log(hasSameElement([1, 3, 4], [1, 3, 4]));
