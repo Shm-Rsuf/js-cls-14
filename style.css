@@ -24,6 +24,8 @@
 
 .div1 {
   background-color: #1e293b;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
 .div2 {
